@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test
 
 class IdGeneratorTest {
 
-    private val generator = IdGenerator(numberOfIds = 10_000_000, seed = 0)
+    private val generator = IdGenerator(numberOfIds = 10_000_000)
 
     @Test
     fun `should create a number of ids`() {
@@ -35,7 +35,7 @@ class IdGeneratorTest {
     @Test
     internal fun `should create two unique lists of ids`() {
         val size = 10
-        val generator = IdGenerator(numberOfIds = 15, seed = 0)
+        val generator = IdGenerator(numberOfIds = 15)
 
         val list1: Result<Set<String>, Nothing> = generator.generate(size)
         val list2: Result<Set<String>, Nothing> = generator.generate(size)

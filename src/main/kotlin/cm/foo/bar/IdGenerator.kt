@@ -1,6 +1,6 @@
 package cm.foo.bar
 
-class IdGenerator(val numberOfIds: Int, var seed: Int) {
+class IdGenerator(val numberOfIds: Int, var seed: Int = 0) {
 
     @Synchronized
     fun generate(num: Int): Result<Set<String>, Nothing> =
